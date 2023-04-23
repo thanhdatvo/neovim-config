@@ -18,7 +18,7 @@ null_ls.setup({
 
 		--[[ formatting.terraform_fmt, ]]
 
-    --[[ formatting.prettierd, ]]
+    formatting.prettierd,
 		--[[ diagnostics.eslint_d.with({ ]]
   --[[     diagnostics_format = '[eslint] #{m}\n(#{c})' ]]
   --[[   }), ]]

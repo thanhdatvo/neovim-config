@@ -5,8 +5,9 @@ end
 
 mason_lspconfig.setup({
 	ensure_installed = {
-		"sumneko_lua", -- lua-language-server
+    "lua_ls",
 		"tsserver", -- typescript-language-server
     "gopls", 
+    "rust_analyzer",
 	},
 })

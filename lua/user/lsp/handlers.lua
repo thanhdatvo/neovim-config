@@ -106,17 +106,17 @@ lsp_defaults.capabilities = vim.tbl_deep_extend(
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
 
 
-lspconfig.sumneko_lua.setup({
-  settings = {
-    Lua = {
-      diagnostics = {
-        globals = { 'vim' }
-      }
-    }
-  }
-  ,
-  on_attach = M.on_attach,
-})
+--[[ lspconfig.sumneko_lua.setup({ ]]
+--[[   settings = { ]]
+--[[     Lua = { ]]
+--[[       diagnostics = { ]]
+--[[         globals = { 'vim' } ]]
+--[[       } ]]
+--[[     } ]]
+--[[   } ]]
+--[[   , ]]
+--[[   on_attach = M.on_attach, ]]
+--[[ }) ]]
 lspconfig.tsserver.setup({
   on_attach = M.on_attach,
 })
@@ -129,6 +129,9 @@ lspconfig.terraformls.setup({
   on_attach = M.on_attach,
 })
 
+lspconfig.rust_analyzer.setup({
+  on_attach = M.on_attach,
+})
 --[[ local servers = { ]]
 --[[   "terraformls", ]]
 --[[   "tsserver", ]]

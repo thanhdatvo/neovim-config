@@ -7,7 +7,9 @@ mason_lspconfig.setup({
 	ensure_installed = {
     "lua_ls",
 		"tsserver", -- typescript-language-server
+    "svelte", -- svelte-langauge-server
     "gopls", 
     "rust_analyzer",
+
 	},
 })

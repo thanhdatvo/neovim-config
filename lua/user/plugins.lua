@@ -48,6 +48,15 @@ return packer.startup(function(use)
 
   use("kyazdani42/nvim-web-devicons")
   use("kyazdani42/nvim-tree.lua")
+  --[[ use { ]]
+  --[[ "nvim-neo-tree/neo-tree.nvim", ]]
+  --[[   branch = "v2.x", ]]
+  --[[   requires = {  ]]
+  --[[     "nvim-lua/plenary.nvim", ]]
+  --[[     "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended ]]
+  --[[     "MunifTanjim/nui.nvim", ]]
+  --[[   } ]]
+  --[[ } ]]
   use("akinsho/bufferline.nvim")
   use("moll/vim-bbye")
   use("nvim-lualine/lualine.nvim")
@@ -111,13 +120,27 @@ return packer.startup(function(use)
 
   -- add rust analyzer
   use 'simrat39/rust-tools.nvim'
-
+  
+  -- to format golang
+  use 'ray-x/go.nvim'
   use({
     "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
     config = function()
       require("lsp_lines").setup()
     end,
   })
+
+  use {
+  'rmagatti/auto-session',
+  --[[ config = function() ]]
+  --[[   require("auto-session").setup { ]]
+  --[[     log_level = "error", ]]
+  --[[     auto_session_suppress_dirs = { "~/", "~/Projects", "~/Downloads", "/"}, ]]
+  --[[     post_restore_cmds = {"NvimTreeOpen"} ]]
+  --[[   } ]]
+  --[[ end ]]
+}
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then

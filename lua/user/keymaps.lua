@@ -104,11 +104,14 @@ keymap("n", "<leader>f", "<cmd>lua vim.lsp.buf.format{async=true}<cr>", opts)
 
 keymap(
   "n",
-  "<leader>p",
+  "<c-p>", 
   "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>",
   opts
 )
-keymap("n", "<c-p>", "<cmd>Telescope live_grep<cr>", opts)
+keymap(
+  "n", 
+  "<leader>p",
+  "<cmd>Telescope live_grep<cr>", opts)
 --[[ keymap("n", "<c-t>", "<cmd>lua require('telescope.builtin').live_grep(require('telescope.utils').buffer_dir(), {prompt_title = 'find string in open buffers...', grep_open_files = true})<cr>", opts) ]]
 
 

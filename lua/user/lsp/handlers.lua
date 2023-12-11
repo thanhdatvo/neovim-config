@@ -132,6 +132,11 @@ lspconfig.terraformls.setup({
 lspconfig.rust_analyzer.setup({
   on_attach = M.on_attach,
 })
+
+lspconfig.lua_ls.setup({
+  on_attach = M.on_attach,
+})
+--[[ local servers = { ]]
 --[[ local servers = { ]]
 --[[   "terraformls", ]]
 --[[   "tsserver", ]]

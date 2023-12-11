@@ -10,11 +10,14 @@ mason_lspconfig.setup({
     --[[ "eslint_d", ]]
     --[[ "tflint", ]]
     --[[ "gopls",  ]]
-    "rust_analyzer",
     --[[ "luaformatter", ]]
     --[[ "luacheck", ]]
     --[[ "delve", ]]
     "gopls",
     --[[ "goimports-reviser", ]]
+    "svelte", -- svelte-langauge-server
+    "gopls", 
+    "rust_analyzer",
+
 	},
 })

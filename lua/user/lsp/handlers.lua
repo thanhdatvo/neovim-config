@@ -129,6 +129,10 @@ lspconfig.tsserver.setup({
   on_attach = M.on_attach,
 })
 
+lspconfig.tailwindcss.setup({
+  on_attach = M.on_attach,
+})
+
 lspconfig.gopls.setup({
   on_attach = M.on_attach,
 })

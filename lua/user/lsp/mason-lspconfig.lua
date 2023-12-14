@@ -18,6 +18,7 @@ mason_lspconfig.setup({
     "svelte", -- svelte-langauge-server
     "gopls", 
     "rust_analyzer",
+    "tailwindcss",
 
 	},
 })

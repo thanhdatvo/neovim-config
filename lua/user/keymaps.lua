@@ -69,7 +69,6 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 --[[ map <leader>pp :r!xsel -p<CR> ]]
 --[[ map <leader>ps :r!xsel -s<CR> ]]
 --[[ map <leader>pb :r!xsel -b<CR> ]]
-
 -- Terminal --
 -- Better terminal navigation
 -- keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
@@ -101,20 +100,17 @@ keymap("n", "<leader>f", "<cmd>lua vim.lsp.buf.format{async=true}<cr>", opts)
 --[[ 	"<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", ]]
 --[[ 	opts ]]
 --[[ ) ]]
-
 keymap(
   "n",
-  "<c-p>", 
+  "<c-p>",
   "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>",
   opts
 )
 keymap(
-  "n", 
+  "n",
   "<leader>p",
   "<cmd>Telescope live_grep<cr>", opts)
 --[[ keymap("n", "<c-t>", "<cmd>lua require('telescope.builtin').live_grep(require('telescope.utils').buffer_dir(), {prompt_title = 'find string in open buffers...', grep_open_files = true})<cr>", opts) ]]
-
-
 -- debug
 keymap("n", "<F5>", "<cmd>lua require'dap'.continue()<cr>", opts)
 keymap("n", "<F10>", "<cmd>lua require'dap'.step_over()<cr>", opts)
@@ -125,3 +121,9 @@ keymap("n", "<leader>B", "<cmd>lua require'dap'.set_breakpoint(vim.fn.input('Bre
 keymap("n", "<leader>lp", "<cmd>lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<cr>", opts)
 keymap("n", "<leader>dr", "<cmd>lua require'dap'.repl.open()<cr>", opts)
 keymap("n", "<leader>dl", "<cmd>lua require'dap'.run_last()<cr>", opts)
+
+-- escape
+keymap("i", "jj", "<ESC>", { silent = true })
+-- quick save 
+vim.api.nvim_set_keymap('i', 'zz', '<Esc>:w<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', 'zz', ':w<CR>', {noremap = true, silent = true})
